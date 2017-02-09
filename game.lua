@@ -5,7 +5,7 @@
 -- returns
 --   s: processed string
 function chomp(s)
-  return gsub(s, "\n$", "")
+  return s.gsub(s, "\n$", "")
 end
 
 math.randomseed( os.time() )
