@@ -22,7 +22,11 @@ while (attempts <= 5) do
       , attempts
       , '/5]: '
    )
-   user_choice = io.read()
+   user_choice = 0 + io.read()
+
+   if (user_choice == computer_choice) then
+      io.write('Браво, ти позна числото - ', computer_choice)
+   end
    attempts = attempts + 1
 end
 
