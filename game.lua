@@ -26,20 +26,17 @@ while (attempts <= 5) do
    )
    user_choice = io.read()
    original_length = user_choice.len(user_choice)
-   if 0 == original_length then
+   -- replace all non numeric symbols with empty string
+   user_choice = user_choice.gsub(user_choice, "[^%d]", '')
+   untainted_length = user_choice.len(user_choice)
+   if (0 == original_length) or (0 == untainted_length) then
       user_choice = 0
       untainted_length = original_length
       hint(0)
-   else
-      -- replace all non numeric symbols with empty string
-      user_choice = user_choice.gsub(user_choice, "[^%d]", '')
-      untainted_length = user_choice.len(user_choice)
+   elseif untainted_length < original_length then
+         hint(user_choice)
    end
    user_choice = tonumber( user_choice )
-
-   if untainted_length < original_length then
-      hint(user_choice)
-   end
 
    if (user_choice == computer_choice) then
       io.write('Браво, ти позна числото - ', computer_choice, "\n")
