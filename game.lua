@@ -24,6 +24,7 @@ while (attempts <= 5) do
 
    if (user_choice == computer_choice) then
       io.write('Браво, ти позна числото - ', computer_choice, "\n")
+      os.exit(true)
    end
    attempts = attempts + 1
 end
