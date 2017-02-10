@@ -34,6 +34,9 @@ while (attempts <= 5) do
       io.write("Нагоре\n")
    elseif user_choice > computer_choice then
       io.write("Надолу\n")
+   else
+      io.write("Уау!!! Как, по дяволите, стигнахме до тук?\n")
+      os.exit(false)
    end
    attempts = attempts + 1
 end
