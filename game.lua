@@ -1,4 +1,10 @@
+#!/usr/bin/env lua-any
+-- Lua-Versions: 5.3
+-- to work above shebang package lua-any need to be installed
+
+-- ##################
 -- guess number game
+-- ##################
 
 -- Remove any final \n from a string.
 --   s: string to process
