@@ -22,11 +22,14 @@ while (attempts <= 5) do
    )
    user_choice = tonumber(io.read())
 
+   if 5 == attempts then
+      io.write('Ти загуби, числото ми беше: ', computer_choice, "\n")
+      os.exit(true)
+   end
+
    if (user_choice == computer_choice) then
       io.write('Браво, ти позна числото - ', computer_choice, "\n")
       os.exit(true)
    end
    attempts = attempts + 1
 end
-
-
