@@ -14,6 +14,10 @@ io.write('Познай числото ми (1-100)!\n')
 io.write('my number is: ', computer_choice, "\n")
 attempts = 1
 
+function hint(s)
+      io.write('Предположението ти бе интерпретирано като: ', s, "\n")
+end
+
 while (attempts <= 5) do
    io.write(
       'Въведете предположението си ['
@@ -21,9 +25,21 @@ while (attempts <= 5) do
       , '/5]: '
    )
    user_choice = io.read()
-   -- replace all non numeric symbols with empty string
-   user_choice = user_choice.gsub(user_choice, "[^%d]", '')
+   original_length = user_choice.len(user_choice)
+   if 0 == original_length then
+      user_choice = 0
+      untainted_length = original_length
+      hint(0)
+   else
+      -- replace all non numeric symbols with empty string
+      user_choice = user_choice.gsub(user_choice, "[^%d]", '')
+      untainted_length = user_choice.len(user_choice)
+   end
    user_choice = tonumber( user_choice )
+
+   if untainted_length < original_length then
+      hint(user_choice)
+   end
 
    if (user_choice == computer_choice) then
       io.write('Браво, ти позна числото - ', computer_choice, "\n")
