@@ -20,7 +20,10 @@ while (attempts <= 5) do
       , attempts
       , '/5]: '
    )
-   user_choice = tonumber(io.read())
+   user_choice = io.read()
+   -- replace all non numeric symbols with empty string
+   user_choice = user_choice.gsub(user_choice, "[^%d]", '')
+   user_choice = tonumber( user_choice )
 
    if 5 == attempts then
       io.write('Ти загуби, числото ми беше: ', computer_choice, "\n")
