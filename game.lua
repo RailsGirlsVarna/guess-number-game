@@ -30,6 +30,10 @@ while (attempts <= 5) do
    if (user_choice == computer_choice) then
       io.write('Браво, ти позна числото - ', computer_choice, "\n")
       os.exit(true)
+   elseif user_choice < computer_choice then
+      io.write("Нагоре\n")
+   elseif user_choice > computer_choice then
+      io.write("Надолу\n")
    end
    attempts = attempts + 1
 end
