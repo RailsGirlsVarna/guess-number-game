@@ -23,7 +23,7 @@ while (attempts <= 5) do
    user_choice = tonumber(io.read())
 
    if (user_choice == computer_choice) then
-      io.write('Браво, ти позна числото - ', computer_choice)
+      io.write('Браво, ти позна числото - ', computer_choice, "\n")
    end
    attempts = attempts + 1
 end
