@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-# Version:3.5.2
+# Version: 3.5.2
 
 import random
 
@@ -25,7 +25,7 @@ while (attempts <= 5):
         if (user_num <= 0):
             print("Грешка. Числото не може да бъде ", user_num)
             attempts -= 1
-        else:
+        elif (attempts != 5):
             if user_num == computer_choice:
                 print("Браво. Ти позна числото: ", user_num)
                 quit(True)
