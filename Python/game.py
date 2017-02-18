@@ -40,3 +40,10 @@ while (attempts <= 5):
     except ValueError:
         error()
         attempts -= 1
+
+    if 5 == attempts:
+        print("Ти загуби тази игра. Числото ми беше: ", computer_choice)
+        quit(True)
+
+     countAttemptsMsg()
+     attempts = attempts + 1
