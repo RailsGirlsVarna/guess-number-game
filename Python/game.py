@@ -27,12 +27,12 @@ while (attempts <= 5):
             attempts -= 1
         elif (attempts != 5):
             if user_num == computer_choice:
-                print("Браво. Ти позна числото: ", user_num)
+                print("Браво. Ти позна числото ми - {0} :)".format(user_num));
                 quit(True)
             elif user_num < computer_choice:
-                print("Нагоре")
+                print("Числото ми е по-голямо от {}.".format(user_num))
             elif user_num > computer_choice:
-                print("Надолу")
+                print("Числото ми е по-малко от {}.".format(user_num))
             else:
                 print("Упс. Нещо се обърка.")
                 quit(False)
@@ -45,4 +45,4 @@ while (attempts <= 5):
         print("Ти загуби тази игра. Числото ми беше: ", computer_choice)
         quit(True)
 
-     attempts = attempts + 1
+    attempts = attempts + 1
