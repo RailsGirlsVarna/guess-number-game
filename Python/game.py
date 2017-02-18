@@ -14,6 +14,7 @@ def error():
 
 
 def countAttemptsMsg():
-    	print("Брой опити: {0}/5".format(attempts))
+    print("Брой опити: {0}/5".format(attempts))
 
 while (attempts <= 5):
+    user_input = input("Въведете вашето предположение: ")
