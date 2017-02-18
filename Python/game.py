@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 # Version: 3.5.2
-# Live demo: https://repl.it/Fo5M/
+# Live demo: https://repl.it/Fo5M/2
 
 import random
 
