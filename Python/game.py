@@ -10,14 +10,14 @@ attempts = 1
 
 
 def error():
-    print("Грешка. Въведете валидно число.")
+	print("Грешка. Въведете валидно число.")
 
 
-def countAttemptsMsg():
-    print("Брой опити: {0}/5".format(attempts))
+def attemptsCount(a):
+	return ("{0}/5".format(a))
 
 while (attempts <= 5):
-    user_input = input("Въведете вашето предположение: ")
+    user_input = input('Въведете вашето предположение ({0}):'.format(attemptsCount(attempts)))
 
     try:
         user_num = int(user_input)
@@ -45,5 +45,4 @@ while (attempts <= 5):
         print("Ти загуби тази игра. Числото ми беше: ", computer_choice)
         quit(True)
 
-     countAttemptsMsg()
      attempts = attempts + 1
